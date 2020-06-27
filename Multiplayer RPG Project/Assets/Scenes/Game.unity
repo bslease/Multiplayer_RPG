@@ -202,14 +202,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf069a212a1c4ff488c51c222bc78334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabPath: 
+  playerPrefabPath: Player
   spawnPoints:
   - {fileID: 1035613398}
   - {fileID: 64186436}
   - {fileID: 1868443274}
   - {fileID: 1311311189}
   - {fileID: 1387667452}
-  respawnTime: 0
+  respawnTime: 3
+  players: []
 --- !u!4 &518231755
 Transform:
   m_ObjectHideFlags: 0
@@ -227,7 +228,7 @@ Transform:
   - {fileID: 1311311189}
   - {fileID: 1387667452}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &866499686
 GameObject:
@@ -240,6 +241,7 @@ GameObject:
   - component: {fileID: 866499689}
   - component: {fileID: 866499688}
   - component: {fileID: 866499687}
+  - component: {fileID: 866499690}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -310,8 +312,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &866499690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866499686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd209db3eb0137d4da4482ab2f871f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1035613397
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,7 +587,7 @@ PrefabInstance:
     - target: {fileID: -683771032815241537, guid: b6959bb9cd208654e817ec342005c958,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -683771032815241537, guid: b6959bb9cd208654e817ec342005c958,
         type: 3}

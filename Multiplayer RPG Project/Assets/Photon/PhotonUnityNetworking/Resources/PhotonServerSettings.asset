@@ -36,6 +36,10 @@ MonoBehaviour:
   - UpdateLobbyUI
   - ChangeScene
   - ImInGame
+  - TakeDamage
+  - Initialize
+  - GiveGold
+  - Heal
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
