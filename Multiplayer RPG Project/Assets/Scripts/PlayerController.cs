@@ -82,6 +82,8 @@ public class PlayerController : MonoBehaviourPun
         if (hit.collider != null && hit.collider.gameObject.CompareTag("Enemy"))
         {
             // get the enemy and damage them
+            Enemy enemy = hit.collider.GetComponent<Enemy>();
+            enemy.photonView.RPC("TakeDamage", RpcTarget.MasterClient, damage);
         }
 
         // play attack animation
@@ -132,6 +134,7 @@ public class PlayerController : MonoBehaviourPun
         rig.isKinematic = false;
 
         // update the health bar
+        headerInfo.photonView.RPC("UpdateHealthBar", RpcTarget.All, curHp);
     }
 
     [PunRPC]
